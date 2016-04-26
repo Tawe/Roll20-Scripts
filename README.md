@@ -1,7 +1,7 @@
 # Roll20-Scripts
 
 ## MultiWhisper.js
-Lets you whisper multiple players at once.
+Lets a user whisper multiple other users with the same message at once.
 
-**Example**
+**Example:**
 "!w @Ted @Bill @Cindy  ^You see the flickering light of torches up ahead"
