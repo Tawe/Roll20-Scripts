@@ -1,0 +1,10 @@
+{
+    "name":         "MultiWhisper",
+    "version":      "0.1.1",
+    "description":  "Whisper multiple players at once.",
+    "authors":      "Tawe",
+    "roll20userid": "799964",
+    "dependencies": {},
+    "modifies":     {},
+    "conflicts":    []
+}
