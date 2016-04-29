@@ -2,6 +2,7 @@ var multiWhisper = multiWhisper || {};
 
 var playerArray = [];
 var message = "";
+var sender = ""
 
 multiWhisper.init=function(msg){
     
@@ -18,8 +19,10 @@ multiWhisper.init=function(msg){
 
     this.findPlayers();
     this.checkIfNotFound();
-
-    sendChat(msg.who, "/w " + msgWho + " " + message);
+    var nameSplit = msg.who.split(" ");
+    sender = nameSplit[0];
+    
+    sendChat(sender, "/w " + sender + " " + message);
 }
 
 multiWhisper.findPlayers= function(){
@@ -33,7 +36,7 @@ multiWhisper.comparePlayerArray=function(player){
     for(var p = 0; p<playerArray.length; p++){
         var displayName = player.get('_displayname').toLowerCase();
         if(displayName == playerArray[p].toLowerCase()){
-            sendChat(msg.who, "/w " + displayName + " " + message);
+            sendChat(sender, "/w " + displayName + " " + message);
             playerArray.splice(p, 1);
         }
     }
