@@ -18,8 +18,8 @@ multiWhisper.init=function(msg){
 
     this.findPlayers();
     this.checkIfNotFound();
-    
-    sendChat(msg.who, message);
+
+    sendChat(msg.who, "/w " + msgWho + " " + message);
 }
 
 multiWhisper.findPlayers= function(){
@@ -33,7 +33,7 @@ multiWhisper.comparePlayerArray=function(player){
     for(var p = 0; p<playerArray.length; p++){
         var displayName = player.get('_displayname').toLowerCase();
         if(displayName == playerArray[p].toLowerCase()){
-            sendChat(displayName, message);
+            sendChat(msg.who, "/w " + displayName + " " + message);
             playerArray.splice(p, 1);
         }
     }
